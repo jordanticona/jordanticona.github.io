@@ -1,0 +1,306 @@
+:root{
+  --primer_color: rgb(10, 110, 190);
+  --segundo_color: rgb(80, 180, 250);
+
+  --blanco: rgb(250, 250, 250);
+  --blanco_dos: rgb(245, 245, 245);
+
+  --negro: rgb(0, 0, 0);
+  --gris: rgb(53, 53, 53);
+
+  --sombra_fuerte: rgba(20, 20, 20);
+  --sombra_suave: rgb(170, 170, 170);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: var(--blanco_dos);
+  font-family: 'Arvo', serif;
+}
+
+/*BARRA DE NAVEGACION*/
+#nav{
+  position: fixed;
+  background: var(--primer_color);
+  width: 90%;
+  left: 5%;
+  top: 0;
+  margin-top: 10px;
+  border-radius: 50px;
+  z-index: 1;
+}
+#abrir_menu{
+  display: none;
+}
+.nav ul{
+  list-style: none;
+  text-align: right;
+  padding: 15px 10px;
+}
+.nav li{
+  display: inline-block;
+  margin-right: 20px;
+}
+.nav a{
+  color: var(--blanco);
+  text-decoration: none;
+}
+.nav a:hover{
+  text-decoration: underline;
+}
+
+/*MAIN*/
+.seccion{
+  padding: 80px 40px;
+}
+.titulo{
+  text-align: center;
+  color: var(--primer_color);
+  margin: 20px 0;
+}
+.contenido{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*PRESENTACION*/
+#presentacion{
+  background-color: var(--gris);
+  min-height: 600px;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.foto_de_perfil{
+  max-width: 320px;
+  height: 320px;
+  margin: auto 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 15px 5px 0 var(--sombra_fuerte);
+}
+.foto_de_perfil .foto{
+    width: 100%;
+}
+.perfil{
+  text-align: center;
+  margin: auto 40px;
+}
+.perfil *{
+  margin-bottom: 15px;
+}
+.perfil p{
+  font-size: 30px;
+  color: var(--blanco);
+  font-style: italic;
+}
+.perfil .nombre{
+  color: var(--segundo_color);
+  font-size: 60px;
+  font-weight: bold;
+}
+.perfil .rol{
+  padding: 15px;
+  margin: 15px;
+  color: var(--blanco);
+  background: none;
+  font-size: 15px;
+  font-weight: 100;
+  text-transform: uppercase;
+  border: 2px solid var(--primer_color);
+  border-radius: 50px;
+}
+
+/*ACERCA DE MI*/
+.objetivo, .datos_personales{
+  width: 400px;
+  margin: auto;
+  padding: 20px;
+}
+.objetivo{
+  text-align: center;
+  font-size: 27px;
+  color: var(--gris);
+}
+.datos_personales *{
+  display: block;
+  margin: 10px;
+}
+.datos_personales label{
+  color: var(--negro);
+}
+.datos_personales input{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid var(--segundo_color);
+  background: none;
+}
+
+/*HABILIDADES*/
+.habilidad{
+  width: 350px;
+  margin: 30px;
+}
+.habilidad h3{
+  text-align: center;
+  color: var(--gris);
+}
+.experiencia{
+  width: 80%;
+  height: 5px;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px var(--sombra_suave);
+  background: var(--blanco);
+  overflow: hidden;
+}
+.experiencia .exp{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: var(--segundo_color);
+  transition: 1s;
+}
+.experiencia .basica{
+  left: -70%;
+}
+.experiencia .media{
+  left: -50%;
+}
+.experiencia .aceptable{
+  left: -30%;
+}
+
+/*EXPERIENCIAS*/
+.proyecto{
+  width: 450px;
+  margin: 30px;
+  padding: 30px;
+  background-color: var(--blanco);
+  box-shadow: 3px 3px 10px var(--sombra_suave);
+}
+.proyecto h3{
+  color: var(--negro);
+  text-align: center;
+}
+.proyecto .descripcion{
+  text-align: justify;
+  margin: 10px auto;
+}
+
+/*FOOTER*/
+#footer{
+  width: 100%;
+  background-color: var(--gris);
+  text-align: center;
+}
+.footer p{
+  color: var(--blanco);
+  font-size: 20px;
+  padding: 60px;
+  margin: auto;
+  width: 800px;
+}
+.redes{
+  padding: 20px;
+}
+.redes a{
+  margin: 20px;
+  color: var(--sombra_suave);
+  text-decoration: none;
+  font-size: 15px;
+  transition: .5s;
+}
+.redes a:hover{
+  color: var(--blanco_dos);
+}
+
+@media (max-width: 950px){
+  /*BARRA DE NAVEGACION*/
+  #nav{
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: -100%;
+    border-radius: 0;
+    margin: 0;
+    background-color: var(--primer_color);
+  }
+  #abrir_menu{
+    display: block;
+    width: 60px;
+    height: 50px;
+    background-color: var(--blanco);
+    color: var(--negro);
+    box-shadow: 1px 1px var(--sombra_suave);
+    position: absolute;
+    font-size: 25px;
+    border: none;
+    border-radius: 50px;
+    transform: translateX(50%);
+    top: 50%;
+    right: 0px;
+  }
+  #abrir_menu:hover{
+    cursor: pointer;
+  }
+  .elemento_vacio{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+  }
+  .nav ul{
+    position: relative;
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    text-align: center;
+  }
+  .nav li{
+    display: block;
+    margin-bottom: 50px;
+  }
+  .nav a{
+    font-size: 20px;
+  }
+
+  /*PRESENTACION*/
+  .foto_de_perfil{
+    margin: 70px auto auto;
+    max-width: 240px;
+    max-height: 240px;
+  }
+  .perfil{
+    width: 75%;
+    margin: auto;
+  }
+  .perfil .nombre{
+    font-size: 40px;
+  }
+  .perfil .rol{
+    font-size:  13px;
+  }
+
+  /*CERCA DE MI*/
+  .objetivo{
+    width: 90%;
+    margin: 70px auto;
+    font-size: 25px;
+  }
+
+  /*FOOTER*/
+  .footer p{
+    width: auto;
+  }
+}
